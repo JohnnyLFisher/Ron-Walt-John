@@ -4,6 +4,7 @@ public class TextAdventure {
 
 
 
+
 //    Ask if the user is ready to start. If they type in "yes", start the game.
 public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
@@ -11,12 +12,10 @@ public static void main(String[] args) {
     String userInput= sc.nextLine();
 
 
-
-
-
-
-
 }
+
+
+
 
 //    Ask the user for their name. Store this as a variable to personalize the adventure.
 
