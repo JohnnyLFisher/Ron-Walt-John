@@ -3,12 +3,16 @@ import java.util.Scanner;
 public class TextAdventure {
 
 
-    Scanner sc = new Scanner(System.in);
+
 //    Ask if the user is ready to start. If they type in "yes", start the game.
 public static void main(String[] args) {
-
+    Scanner sc = new Scanner(System.in);
     System.out.println("Do you want to start the game? :");
     String userInput= sc.nextLine();
+
+
+
+
 
 
 
