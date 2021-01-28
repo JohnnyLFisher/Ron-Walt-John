@@ -9,8 +9,7 @@ import java.util.Scanner;
 //    Ask if the user is ready to start. If they type in "yes", start the game.
 //public static void main(String[] args) {
 //    Scanner sc = new Scanner(System.in);
-//    System.out.println("Do you want to start the game? :");
-//    String userInput= sc.nextLine();
+
 //
 //
 //}
@@ -58,7 +57,13 @@ public class TextAdventure {
 
         boolean running = true;
 
-        System.out.println("Welcome to the Dungeon");
+        System.out.println("Do you want to enter the dungeon? :");
+        String userInput= in.nextLine();
+        System.out.println("What's your name:");
+        String userName = in.nextLine();
+        System.out.println("Welcome, " + userName + " to the Dungeon of Doom!!!");
+
+
 
 
         GAME:
@@ -72,7 +77,7 @@ public class TextAdventure {
 
             while (enemyHealth > 0) {
                 System.out.println("\tYour HP:" + health);
-                System.out.println("\t " + enemy + "'s HP" + enemyHealth);
+                System.out.println("\t " + enemy + "'s HP " + enemyHealth);
                 System.out.println("\n\tWhat would you like to do?");
                 System.out.println("\t1. Attack");
                 System.out.println("\t2. Drink Health Potion");
@@ -86,7 +91,7 @@ public class TextAdventure {
 
                     enemyHealth -= damageDealt;
                     health -= damageTaken;
-                    System.out.println("\t> You strike the " + enemy + "for" + damageDealt + " damage");
+                    System.out.println("\t> You strike the " + enemy + " for " + damageDealt + " damage");
                     System.out.println("\t> You receive " + damageTaken + " in retaliation ");
 
                     if (health < 1) {
@@ -101,11 +106,11 @@ public class TextAdventure {
                         health += healthPotionHealAmount;
                         numHealthPotions--;
                         System.out.println("\t> You drink the health potion, healing yourself for " + healthPotionHealAmount
-                                + "\n\t> You now have " + health + "HP."
+                                + "\n\t> You now have " + health + " HP."
                                 + "\n\t> You have " + numHealthPotions + " health potions left.\n");
 
                     } else {
-                        System.out.println("\t> You have no health potions left!  Defeat enemies for a chance to get one!\n");
+                        System.out.println("\t> You have no health potions left! Defeat enemies for a chance to get one!\n");
                     }
                 }
                 else if (input.equals("3")) {
